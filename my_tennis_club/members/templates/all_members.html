@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block content %}
+    <p><a href="/">HOME</a></p>
     <h1>Members</h1>
     {% for x in mymembers %}
         <li><a href="details/{{x.id}}">{{x.firstName}}{{x.lastName}}</a></li>
