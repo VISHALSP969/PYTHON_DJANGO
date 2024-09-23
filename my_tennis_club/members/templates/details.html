@@ -6,11 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Members</h1>
-    <ul>
-        {% for x in mymembers %}
-        <li><a href="details/{{x.id}}">{{x.firstName}} {{x.lastName}}</a></li>
-        {% endfor %}
-    </ul>
+    <h1>{{mymember.firstName}} {{mymember.lastName}}</h1>
+    <p>Phone : {{mymember.phone}}</p>
+    <p>Member since : {{mymember.joined_date}}</p>
+
+    <p>Back to <a href="/members">Members</a></p>
 </body>
 </html>
