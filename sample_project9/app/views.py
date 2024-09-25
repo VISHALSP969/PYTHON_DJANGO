@@ -6,6 +6,6 @@ from django.template import loader
 def testing(request):
     template=loader.get_template('template.html')
     context={
-        'greeting':2,
+        'greeting':3,
     }
     return HttpResponse(template.render(context,request))
