@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if greeting %}
+    <h1>Hello</h1>
+    {% endif %}
+
+    {% if greeting == 2 %}
+    <h1>Hello</h1>
+    {% endif %}
+
+    {% if greeting != 1 %}
+    <h1>Hello</h1>
+    {% endif %}
+
+    {% if greeting < 3 %}
+    <h1>Hello</h1>
+    {% endif %} 
+
+    {% if greeting <= 3 %}
+    <h1>Hello</h1>
+    {% endif %} 
+
+    {% if greeting > 1 %}
+    <h1>Hello</h1>
+    {% endif %}
+
+    {% if greeting >= 1 %}
+    <h1>Hello</h1>
+    {% endif %} 
+
+    {% if greeting == 1 and day == "Friday" or greeting == 5 %}
+    <h1>Hello Weekend!</h1>
+    {% endif %}
+
+    {% if 'Banana' in fruits %}
+    <h1>Hello</h1>
+    {% else %}
+    <h1>Goodbye</h1>
+    {% endif %} 
+
+    {% if 'Banana' not in fruits %}
+    <h1>Hello</h1>
+    {% else %}
+    <h1>Goodbye</h1>
+    {% endif %}
+
+    {% if x is y %}
+    <h1>YES</h1>
+    {% else %}
+    <h1>NO</h1>
+    {% endif %}
+
+    {% if x == y %}
+    <h1>YES</h1>
+    {% else %}
+    <h1>NO</h1>
+    {% endif %}
+
+    {% if x is not y %}
+    <h1>YES</h1>
+    {% else %}
+    <h1>NO</h1>
+    {% endif %}
+
+    <p>In views.py you can see what the greeting variable looks like.</p>
+
+    {% with var1=x var2=x %}
+    {% if var1 is var2 %}
+    <h1>YES</h1>
+    {% else %}
+    <h1>NO</h1>
+    {% endif %}
+    {% endwith %}
+</body>
+</html>
