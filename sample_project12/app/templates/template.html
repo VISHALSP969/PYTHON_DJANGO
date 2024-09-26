@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for x in members %}
+        <h1>{{x.id}}</h1>
+        <p>
+            {{x.firstname}}
+            {{x.lastname}}
+        </p>
+        <p>{{x.phone}}</p>
+        <p>{{x.joined_date}}</p>
+    {% endfor %}
+    <p>In views.py you can see how to import and fetch members from the database.</p>
+</body>
+</html>
