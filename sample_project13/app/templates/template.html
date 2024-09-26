@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        {% for x in fruits %}
+        <li>{{x}}</li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for x in fruits %}
+        <li>{{forloop.counter}}</li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for x in fruits %}
+        <li>{{forloop.counter0}}</li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for x in fruits %}
+          <li
+            {% if forloop.first %}
+              style='background-color:lightblue;'
+            {% endif %}
+          >{{ x }}</li>
+        {% endfor %}
+      </ul>
+
+      <ul>
+        {% for x in fruits %}
+          <li
+            {% if forloop.last %}
+              style='background-color:lightblue;'
+            {% endif %}
+          >{{ x }}</li>
+        {% endfor %}
+      </ul> 
+
+      <ul>
+        {% for x in fruits %}
+          <li>{{ forloop.revcounter }}</li>
+        {% endfor %}
+      </ul> 
+
+      <ul>
+        {% for x in fruits %}
+          <li>{{ forloop.revcounter0 }}</li>
+        {% endfor %}
+      </ul>
+</body>
+</html>
