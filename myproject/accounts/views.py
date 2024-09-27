@@ -7,7 +7,6 @@ def signup_view(request):
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
-            # Hashing passwords can be added here for security (optional)
             user = form.save(commit=False)
             user.password = form.cleaned_data['password']
             user.save()
