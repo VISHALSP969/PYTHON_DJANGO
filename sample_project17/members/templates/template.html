@@ -36,6 +36,18 @@
             <td>{{ x.lastname }}</td>
         </tr>
         {% endfor %}
+    </table><br/>
+
+    <p>{{mymembers2}}</p>
+    <table border='1'>
+        <tr>
+            <th>First Name</th>
+        </tr>
+        {% for x in mymembers2 %}
+        <tr>
+            <td>{{ x }}</td>
+        </tr>
+        {% endfor %}
     </table>
 
     <p>In views.py you can see how to import and fetch from the database.</p>
