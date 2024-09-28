@@ -2,12 +2,14 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from .models import Member
+from django.db.models import Q
 
 # Create your views here.
 def testing(request):
     # mydata=Member.objects.filter(firstname="Emil").values()
     # mydata=Member.objects.filter(firstname="Emil",id=1).values()
-    mydata = Member.objects.filter(firstname='Emil').values() | Member.objects.filter(firstname='Tobias').values()
+    # mydata = Member.objects.filter(firstname='Emil').values() | Member.objects.filter(firstname='Tobias').values()
+    mydata = Member.objects.filter(Q(firstname='Emil') | Q(firstname='Lene')).values()
     template=loader.get_template('template.html')
     context={
         'mymembers':mydata,
