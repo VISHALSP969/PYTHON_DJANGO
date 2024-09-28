@@ -10,6 +10,7 @@ def testing(request):
     # mydata=Member.objects.filter(firstname="Emil",id=1).values()
     # mydata = Member.objects.filter(firstname='Emil').values() | Member.objects.filter(firstname='Tobias').values()
     # mydata = Member.objects.filter(Q(firstname='Emil') | Q(firstname='Lene')).values()
+    
     # Field lookups
     # mydata = Member.objects.filter(firstname__startswith='L').values()
     # mydata = Member.objects.filter(firstname__contains='bias').values()
@@ -22,7 +23,13 @@ def testing(request):
     # mydata = Member.objects.filter(id__gte=3).values()
     # mydata = Member.objects.filter(id__lt=3).values()
     # mydata = Member.objects.filter(id__lte=3).values()
-    mydata = Member.objects.filter(firstname__istartswith='s').values()
+    #mydata = Member.objects.filter(firstname__istartswith='s').values()
+    
+    #ordered_by()
+    # mydata = Member.objects.all().order_by('firstname').values()
+    # mydata = Member.objects.all().order_by('-firstname').values()
+    mydata = Member.objects.all().order_by('lastname', '-id').values()
+
     template=loader.get_template('template.html')
     context={
         'mymembers':mydata,
