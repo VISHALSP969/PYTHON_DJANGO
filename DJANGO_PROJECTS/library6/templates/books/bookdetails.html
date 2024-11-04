@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Template</h1>
+    <h3>{{ data1 }}</h3>
+    <hr/>
+    <h3>{{ data1.math }}</h3>
+    <h3>{{ data1.science }}</h3>
+    <hr/>
+    {% for k,v in data1.items %}
+        {{k}}
+        {% for book,title in v.items %}
+            <li>{{ book }} : {{ title }}</li>
+        {% endfor %}
+    {% endfor %}
+    <hr/>
+</body>
+</html>
