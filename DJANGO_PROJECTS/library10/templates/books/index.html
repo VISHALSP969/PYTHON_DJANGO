@@ -1,0 +1,21 @@
+{% extends "books/base.html" %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block header %}
+    {{ block.super }}
+    <h2>Special Welcome to the Home Page</h2>
+{% endblock %}
+
+{% block content %}
+    <p>Welcome to the home page of our Django site! Enjoy exploring.</p>
+    <p>Here are some of our latest updates.</p>
+    {{ block.super }}
+{% endblock %}
+
+{% block footer %}
+    {{ block.super }}
+    <p>Contact:+1 234 456 7890</p>
+{% endblock %}

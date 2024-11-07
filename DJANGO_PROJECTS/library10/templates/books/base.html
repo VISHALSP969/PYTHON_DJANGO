@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}My Django Site{% endblock %}</title>
+</head>
+<body>
+    <!-- include the navigation bar from navbar.html -->
+    {% include "books/navbar.html"%}
+
+    <header>
+        <h1>{% block header %}Welcome to My Django Website{% endblock %}</h1>
+    </header>
+
+    <main>
+        {% block content %}
+            <p>This is the main content area.</p>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy;2024 My Site</p>
+        {% block footer %}
+            <p>Custom footer content.</p>
+        {% endblock %}
+    </footer>
+</body>
+</html>
