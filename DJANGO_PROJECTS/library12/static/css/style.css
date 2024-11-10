@@ -1,0 +1,14 @@
+h1{
+    color: blue;
+    text-align: center;
+}
+img{
+    width: 800px;
+    height: 500px;
+}
+body{
+    background-image: url('/static/images/img2.jpg');
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
