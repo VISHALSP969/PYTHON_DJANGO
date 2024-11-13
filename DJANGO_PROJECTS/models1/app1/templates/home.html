@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for eachitem in data %}
+        {{eachitem.name}} <br/>
+        {{eachitem.email}} <br/>
+        {{eachitem.phone_no}} <br/>
+        {{eachitem.birth_date}} <br/><hr/>
+    {% endfor %}
+    {% for eachitem in data1 %}
+        {{eachitem.name}} <br/>
+        {{eachitem.email}} <br/>
+        {{eachitem.phone_no}} <br/>
+        {{eachitem.birth_date}} <br/><hr/>
+    {% endfor %}
+    {% for eachitem in data2 %}
+        {{eachitem.name}} <br/>
+        {{eachitem.email}} <br/>
+        {{eachitem.phone_no}} <br/>
+        {{eachitem.birth_date}} <br/><hr/>
+    {% endfor %}
+</body>
+</html>
